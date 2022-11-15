@@ -10,6 +10,7 @@
     --logo-down-color: #ffffff;
     --address-color: #ffffff;
     --address-secondary-color: rgba(255, 255, 255, 0.6);
+    --logo-clients-color: rgba(175, 177, 184, 1);
     }
     
     h1,
@@ -183,6 +184,7 @@
     max-width: 1600px;
     
     background-color: var(--footer-hero-bg-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/hero-logo-opt.jpg);
     
     }
     
@@ -266,6 +268,8 @@
     .advantage .item{
         width: 270px;
     }
+
+    
     
     /*Чим займаємося*/ 
     
@@ -315,13 +319,16 @@
         margin-right: 30px;
     }
     
-    .card {
-    
+    .card {    
     background-color:var(--primary-bg-color)
+
     }
     
     .name{
         padding: 30px 15px;
+    
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
     }
 
     .name > .title {
@@ -342,7 +349,69 @@
     .card > img {
         display: block;
     }
+    /*Соціальні мережі*/
+
+    .name .list{
+        justify-content: center;
+    }
+    .team .link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        --color1: var(--logo-clients-color);
+        border-radius: 50%;
+    }
+
+    .team .link:nth-child(:last child) {
+        margin-right: 10px;
+    }
+
+    /*Постійні клієнти*/
+    .clients{
+        padding-top: 94px;  
+        padding-bottom: 94px;
+        }
+    .clients .title{
+        margin-bottom: 50px;
+    }
+
+
+    .clients-box{
+        display: flex;
+        justify-content: center;
+    }    
+
+    .list.clients-box > .item{
+        margin-top: 0px;
+    }
+
+    .clients-box > .item:not(:last-child){
+        
+        margin-right: 30px;
+        
+    }
+
+
+    .clients-box .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 170px;
+        height: 92px;
+        --color1: var(--logo-clients-color);
+        border: 1px solid var(--logo-clients-color);
+        border-radius: 4px;
+    }
     
+    .list.clients-box .link:hover,
+    .list.clients-box .link:focus{
+        --color1: var(--accent-color);
+        border-color: var(--accent-color);
+        
+    }
+
     /*Портфоліо*/
     .portfolio{
         padding-top: 94px;
@@ -385,6 +454,7 @@
         color: var(--logo-down-color);
         background-color: var(--accent-color);
         cursor: pointer;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     }
     
     /*Галерея*/
