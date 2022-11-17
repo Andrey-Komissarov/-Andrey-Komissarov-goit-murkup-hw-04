@@ -134,17 +134,13 @@
     .nav > .list > .item:not(:last-child){
         margin-right: 50px;
     }
-    
-    .contacts.list{
-        display: flex;
-        align-items: center;
-    
-    }
-    
+       
+  
     .contacts > .item:not(:last-child){
-    margin-right: 50px;
+    margin-right: 30px;
     margin-left: 0px;
     } 
+    
     
     .nav > .list .link:hover,
     .nav > .list .link:focus {
@@ -156,13 +152,20 @@
     }
     
     /*contacts*/
-    
+    .contacts.list{
+        display: flex;
+        align-items: center;
+    }
+
+     
     .contacts .link {
-    display: block;
+    display: flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
     
-    color: var(--secondary-link-color);    
+    color: var(--secondary-link-color);
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -170,11 +173,18 @@
     }
     
     .contacts .link:hover,
-    .contacts .link:focus {
+    .contacts .link:focus,
+    .contacts .icon:hover,
+    .contacts .icon:focus {
     color: var(--accent-color);
+    --color4: var(--accent-color);
     }
-    
-    /*Hero*/
+     
+    .contacts .icon{
+        margin-right: 10px;
+    }
+
+        /*Hero*/
     
     .hero {
     padding-top:  200px;
@@ -344,17 +354,18 @@
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+    padding-bottom: 16px;
     }
     
     .card > img {
         display: block;
     }
     /*Соціальні мережі*/
-
-    .name .list{
+      .name > .list{
         justify-content: center;
-    }
-    .team .link {
+      }
+
+      .name .link {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -364,9 +375,21 @@
         border-radius: 50%;
     }
 
-    .team .link:nth-child(:last child) {
+    .team .item:not(:last-child) {
         margin-right: 10px;
     }
+
+    .name > .list > .item{
+        margin-top: 0px;
+    }
+
+    .name .link:hover,
+    .name .link:focus{
+        background-color:var(--accent-color);
+        --color1: var(--secondary-bg-color);
+
+    }
+
 
     /*Постійні клієнти*/
     .clients{
@@ -503,6 +526,11 @@
         border-bottom: 1px solid #eeeeee;
     }
     
+    .portfolio .galerry-card:hover,
+    .portfolio .galerry-card:focus{
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
     /*footer*/
     
     .footer {
@@ -513,8 +541,8 @@
     
     .footer > .container {
         display: flex;
-        justify-content: center;
-        flex-direction: column;
+       /* justify-content: center;
+        flex-direction: column;*/
     }
     
     .footer .logo.link{
@@ -525,7 +553,7 @@
         margin-top: 20px; 
     }
 
-    .list > .item{
+    .footer .box-address .item{
         margin-top: 9px;
     }
 
@@ -559,4 +587,44 @@
         display: inline-block;
         
     }
-    
+     
+    .box-links{
+        padding-top: 12px;
+        margin-left: 70px;
+    }
+
+    .box-links > .list{
+        display: flex;
+    }
+
+    .box-links .item:not(:last-child){
+      margin-right: 10px;  
+
+    }
+
+    .join{
+        margin-bottom: 20px;
+        font-weight: 700;
+        line-height: 1.143;
+        text-transform: uppercase;
+
+        color: var(--logo-down-color);
+
+    }
+
+    .box-links .link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: var(--primary-text-color);
+        --color1: var(--address-color);
+    }
+
+  .box-links .link:hover,
+  .box-links .link:focus{
+    cursor: pointer;
+    background-color: var(--accent-color);
+  }
